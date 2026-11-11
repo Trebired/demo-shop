@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "fields": {
+    "checkout.note": { "cs": "Zboží odesíláme do dvou pracovních dnů.", "en": "We ship within two working days." },
+    "footer.note": { "cs": "Ukázkový e-shop.", "en": "A demo e-shop." },
+    "home.lead": {
+      "cs": [{ "type": "p", "runs": [{ "text": "Ukázka obchodu postaveného na " }, { "bold": true, "text": "@trebired/e-shop" }, { "text": ", spravovaného z Operlornu." }] }],
+      "en": [{ "type": "p", "runs": [{ "text": "A shop built on " }, { "bold": true, "text": "@trebired/e-shop" }, { "text": ", run from Operlorn." }] }]
+    },
+    "home.title": { "cs": "Ukázkový obchod", "en": "Demo shop" }
+  },
+  "collections": {}
+}
