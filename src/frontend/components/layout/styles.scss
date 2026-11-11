@@ -1,0 +1,21 @@
+.okr-brand {
+  color: var(--tbf-text, #1c1712);
+  font-family: var(--tbf-heading-font-family, "Fraunces", Georgia, serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.okr-brand--small {
+  font-size: 1.15rem;
+}
+
+.okr-header {
+  border-bottom: 1px solid var(--tbf-border, #e5ddd2);
+  padding-block: 12px 18px;
+}
+
+.okr-footer {
+  border-top: 1px solid var(--tbf-border, #e5ddd2);
+  padding-block: 24px;
+}

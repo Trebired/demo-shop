@@ -1,0 +1,11 @@
+.okr-hero {
+  background: color-mix(in srgb, var(--clay-400, #5e2810) 8%, var(--tbf-page, #fbf8f2));
+  border: 1px solid color-mix(in srgb, var(--clay-400, #5e2810) 14%, transparent);
+  border-radius: var(--radius-xl, 24px);
+  padding: clamp(28px, 6vw, 64px);
+}
+
+.okr-hero__lead {
+  font-size: 1.15rem;
+  max-width: 38rem;
+}

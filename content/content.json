@@ -1,13 +1,13 @@
 {
   "format": 1,
   "fields": {
-    "checkout.note": { "cs": "Zboží odesíláme do dvou pracovních dnů.", "en": "We ship within two working days." },
-    "footer.note": { "cs": "Ukázkový e-shop.", "en": "A demo e-shop." },
+    "checkout.note": { "cs": "Každý kus balíme ručně a odesíláme do dvou pracovních dnů.", "en": "Every piece is packed by hand and ships within two working days." },
+    "footer.note": { "cs": "Okrová dílna je ukázkový obchod. Objednávky se neodesílají.", "en": "Okrová dílna is a demo shop. Orders are not shipped." },
     "home.lead": {
-      "cs": [{ "type": "p", "runs": [{ "text": "Ukázka obchodu postaveného na " }, { "bold": true, "text": "@trebired/e-shop" }, { "text": ", spravovaného z Operlornu." }] }],
-      "en": [{ "type": "p", "runs": [{ "text": "A shop built on " }, { "bold": true, "text": "@trebired/e-shop" }, { "text": ", run from Operlorn." }] }]
+      "cs": [{ "type": "p", "runs": [{ "text": "Hrnky, mísy a papírové zboží z malé dílny v Brně. Každý kus je " }, { "italic": true, "text": "trochu jiný" }, { "text": "." }] }],
+      "en": [{ "type": "p", "runs": [{ "text": "Mugs, bowls and paper goods from a small workshop in Brno. Every piece is " }, { "italic": true, "text": "a little different" }, { "text": "." }] }]
     },
-    "home.title": { "cs": "Ukázkový obchod", "en": "Demo shop" }
+    "home.title": { "cs": "Ručně točená keramika", "en": "Hand-thrown ceramics" }
   },
   "collections": {}
 }

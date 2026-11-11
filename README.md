@@ -2,7 +2,7 @@
 
 # Demo Shop
 
-**An e-shop on `@trebired/e-shop`: catalog, cart, checkout, bank transfer with a QR code, optional card payments and Packeta, invoices and customer accounts, run from Operlorn through the shop admin API, with its texts edited through the content management in `@trebired/frontend`.**
+**Okrová dílna, a fictional ceramics workshop's e-shop built on `@trebired/e-shop`: catalog, cart, checkout, bank transfer with a QR code, optional card and Bitcoin payments and Packeta, invoices and customer accounts, run from Operlorn through the shop admin API, with its texts edited through the content management in `@trebired/frontend`.**
 
 [![License](https://img.shields.io/badge/license-MIT-black)](LICENSE)
 [![Runtime](https://img.shields.io/badge/runtime-Bun-black)](#install)
@@ -36,7 +36,7 @@ DATABASE_URL=postgres://... ESHOP_ADMIN_TOKEN=<64 hex characters> bun run dev
 ESHOP_ADMIN_TOKEN=<the same token> bun run seed
 ```
 
-`dev` builds the pages, creates the shop tables and serves the shop on port 3000. `seed` adds three products when the catalog is empty.
+`dev` builds the pages, creates the shop tables and serves the shop on port 3000. `seed` adds six products when the catalog is empty.
 
 ```sh
 bun run build
@@ -47,7 +47,11 @@ bun run start
 
 ### Pages and Shop
 
-The pages are built once into `dist/`, like a static site. `src/bin/server.ts` serves them and mounts the shop, which owns `/eshop/api` for the storefront and `/eshop/admin/api/v1` for Operlorn. Product, order and password reset pages share one built page each, filled from the address in the browser.
+Every shop page comes from the storefront preset in `@trebired/e-shop`, configured under `storefront` in `.trebired/e-shop/config.ts`. The app adds only its brand: the header and footer, the introduction above the catalog and the note above checkout, both placed through the preset's page slots. The pages are built once into `dist/`. `src/bin/server.ts` mounts the shop, which owns `/eshop/api` for the storefront, `/eshop/admin/api/v1` for Operlorn and every storefront page address, and serves the remaining files.
+
+### Design
+
+`.trebired/frontend/` holds the shop's own tbf design: a warm paper palette with a terracotta accent, Fraunces for headings and Figtree for text, rounded shapes and shop-sized buttons, light first with a dark mode. Product art lives in `src/frontend/public/media/products`.
 
 ### Content
 
@@ -66,6 +70,7 @@ Connecting the shop in Operlorn creates the admin token and puts `ESHOP_ADMIN_TO
 - `SMTP_URL`, `SHOP_MAIL_FROM`, `SHOP_MAIL_OPERATOR`: order email.
 - `ESHOP_EVENTS_URL`: where order changes are reported; Operlorn sets it.
 - `STRIPE_SECRET_KEY` with `STRIPE_WEBHOOK_SECRET`, `GOPAY_GOID` with `GOPAY_CLIENT_ID` and `GOPAY_CLIENT_SECRET`, `COMGATE_MERCHANT` with `COMGATE_SECRET`: card payments, in test mode.
+- `BTCPAY_SERVER_URL` and `BTCPAY_STORE_ID` with `BTCPAY_API_KEY` and `BTCPAY_WEBHOOK_SECRET`: Bitcoin through the shop's BTCPay Server.
 - `PACKETA_API_KEY`, `PACKETA_API_PASSWORD`, `PACKETA_SENDER`: Packeta pickup points.
 - `SHOP_IBAN`, `SHOP_COMPANY_ID`: the bank account and company id on payment instructions and invoices.
 - `CMS_EDITOR_ORIGINS`: the Operlorn addresses allowed to open the shop in edit mode, read at build time.
